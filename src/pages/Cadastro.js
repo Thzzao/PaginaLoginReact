@@ -1,8 +1,8 @@
-import { Botao } from '../components/Botao';
 import '../style/global.css';
+import firebase from '../utils/firebase';
+import { Botao } from '../components/Botao';
 // import { useState } from 'react';
 import React, { Component } from 'react';
-import firebase from '../utils/firebase';
 
 
 class Cadastro extends Component {
@@ -18,12 +18,12 @@ class Cadastro extends Component {
         this.salvar = this.salvar.bind(this);
     }
     async salvar() {
-        await firebase.firestore().collection("usuario").add({
-            nome: this.state.nome,
-            sobrenome: this.state.sobrenome,
-            dataNas: this.state.dataNas,
-            email: this.state.email,
-            password: this.state.password
+        await firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(async (retorno) => {
+            await firebase.firestore().collection("usuario").doc(retorno.user.uid).set({
+                nome: this.state.nome,
+                sobrenome: this.state.sobrenome,
+                dataNas: this.state.dataNas
+            })
         })
     }
     render() {
