@@ -1,8 +1,8 @@
 import { Botao } from '../components/Botao';
 import '../style/global.css';
-import { useState } from 'react';
+// import { useState } from 'react';
 import React, { Component } from 'react';
-import firebase from '../utils/Firebase';
+import firebase from '../utils/firebase';
 
 
 class Cadastro extends Component {
@@ -30,68 +30,68 @@ class Cadastro extends Component {
         return (
             <form>
                 {/* NOME */}
-                <div className="inputContainer"></div>
-                <label htmlFor="nome">Nome</label>
-                <input
-                    type="text"
-                    name="nome"
-                    id="nome"
-                    placeholder="Digite seu nome"
-                    onChange={e => this.setState({ nome: e.target.value })}>
-                </input>
-            </div>
-                {/* SOBRENOME */ }
-        <div className="inputContainer">
-            <label htmlFor="sobrenome">Sobrenome</label>
-            <input
-                type="text"
-                name="sobrenome"
-                id="sobrenome"
-                placeholder="Digite seu sobrenome"
-                // value={sobrenome}
-                onChange={e => this.setState({ sobrenome: e.target.value })}>
-            </input>
-        </div>
-        {/* DATA DE NASCIMENTO */ }
-        <div className="inputContainer">
-            <label htmlFor="dataNas">Data de Nascimento</label>
-            <input
-                type="date"
-                name="dataNas"
-                id="dataNas"
-                placeholder="Sua data de nascimento"
-                // value={dataNas}
-                onChange={e => this.setState({ dataNas: e.target.value })}>
-            </input>
-        </div>
-        {/* EMAIL */ }
-        <div className="inputContainer">
-            <label htmlFor="email">E-mail</label>
-            <input
-                type="text"
-                name="email"
-                id="email"
-                placeholder="Digite seu email"
-                // value={email}
-                onChange={e => this.setState({ email: e.target.value })}>
-            </input>
-        </div>
-        {/* SENHA */ }
-        <div className="inputContainer">
-            <label htmlFor="senha">Senha</label>
-            <input
-                type="password"
-                name="senha"
-                id="senha"
-                placeholder="Digite sua senha"
-                // value={password}
-                onChange={e => this.setState({ password: e.target.value })}>
-            </input>
-        </div>
+                <div className="inputContainer">
+                    <label htmlFor="nome">Nome</label>
+                    <input
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        onChange={e => this.setState({ nome: e.target.value })}>
+                    </input>
+                </div>
+                {/* SOBRENOME */}
+                <div className="inputContainer">
+                    <label htmlFor="sobrenome">Sobrenome</label>
+                    <input
+                        type="text"
+                        name="sobrenome"
+                        id="sobrenome"
+                        placeholder="Digite seu sobrenome"
+                        // value={sobrenome}
+                        onChange={e => this.setState({ sobrenome: e.target.value })}>
+                    </input>
+                </div>
+                {/* DATA DE NASCIMENTO */}
+                <div className="inputContainer">
+                    <label htmlFor="dataNas">Data de Nascimento</label>
+                    <input
+                        type="date"
+                        name="dataNas"
+                        id="dataNas"
+                        placeholder="Sua data de nascimento"
+                        // value={dataNas}
+                        onChange={e => this.setState({ dataNas: e.target.value })}>
+                    </input>
+                </div>
+                {/* EMAIL */}
+                <div className="inputContainer">
+                    <label htmlFor="email">E-mail</label>
+                    <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Digite seu email"
+                        // value={email}
+                        onChange={e => this.setState({ email: e.target.value })}>
+                    </input>
+                </div>
+                {/* SENHA */}
+                <div className="inputContainer">
+                    <label htmlFor="senha">Senha</label>
+                    <input
+                        type="password"
+                        name="senha"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        // value={password}
+                        onChange={e => this.setState({ password: e.target.value })}>
+                    </input>
+                </div>
 
 
 
-        {/* ZZZZZZZZZZZZZZZZZZZZZZZZZZ */ }
+                {/* ZZZZZZZZZZZZZZZZZZZZZZZZZZ */}
                 <div>
                     <Botao texto="Cadastrar" />
                     {/* chamar a função valida casdastro e depois chamar a função salvar() */}
