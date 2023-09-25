@@ -1,0 +1,19 @@
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 40px;
+    background-color: #07def7;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
