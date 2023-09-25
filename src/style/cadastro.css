@@ -1,0 +1,75 @@
+.containerCadastro {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+}
+
+.logo {
+    margin-bottom: -160px;
+    margin-top: -50px;
+}
+
+.containerCadastro .logo {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+}
+
+.containerCadastro form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerCadastro form .inputContainer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.containerCadastro form .inputContainer label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 8px;
+}
+
+.containerCadastro form .inputContainer input {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    width: 350px;
+    height: 40px;
+    border: 2px solid #47f9ff;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-family: unset;
+    font-size: 15px;
+}
+
+.containerCadastro form .inputContainerData input {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;
+    padding-left: 16px;
+    width: 350px;
+    height: 40px;
+    border: 2px solid #47f9ff;
+    border-radius: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: unset;
+    font-size: 15px;
+}
+
+.footer {
+    padding-top: 8px;
+}
