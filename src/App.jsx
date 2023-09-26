@@ -8,7 +8,4 @@ export function App() {
             <Rotas />
         </Router>
     );
-
-
 }
-
