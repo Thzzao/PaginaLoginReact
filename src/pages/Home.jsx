@@ -30,9 +30,11 @@ function Home() {
             <header className="logo">
                 <img src={logo} alt="Logo da página" />
             </header>
-            Nome: {nome} <br />
-            Sobrenome: {sobrenome} <br />
-            Data de nascimento: {dataNas} <br />
+            <p>
+                Nome: {nome} <br />
+                Sobrenome: {sobrenome} <br />
+                Data de nascimento: {dataNas} <br />
+            </p>
         </div>
     );
 }
