@@ -1,15 +1,16 @@
+import firebase from '../utils/firebase';
 import logo from '../logo.png';
 import '../style/login.css';
-import firebase from '../utils/firebase';
 import { Botao } from '../components/botao/Botao';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-//const [mensage, setMensage] = useState("")
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [mensage, setMensage] = useState("");
+
 
     async function Acessar() {
         await firebase.auth().signInWithEmailAndPassword(email, password)
@@ -19,8 +20,10 @@ function Login() {
             .catch((erro) => {
                 setMensage("Usuário não cadastrado")
             })
+        setTimeout(() => {
+            setMensage("")
+        }, 5000);
     }
-
     return (
         <div className="container">
             <header className="logo">
@@ -34,7 +37,6 @@ function Login() {
                         name="email"
                         id="email"
                         placeholder="Digite seu email"
-                        // value={email}
                         onChange={e => setEmail(e.target.value)}>
                     </input>
                 </div>
@@ -45,16 +47,17 @@ function Login() {
                         name="senha"
                         id="senha"
                         placeholder="Digite sua senha"
-                        // value={password}
                         onChange={e => setPassword(e.target.value)}>
                     </input>
                 </div>
+                <text className='cadastroLink'>
+                    <Link to='/cadastro'>Cadastre-se aqui!</Link>
+                </text>
                 <div>
                     <Botao text="Entrar" click={() => {
                         Acessar()
                     }} />
                 </div>
-
                 <div className="footer">
                     <label>{mensage}</label>
                 </div>
