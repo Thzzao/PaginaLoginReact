@@ -1,0 +1,7 @@
+version: "3.2"
+services:
+  node-server:
+    container_name: node_docker
+    image: node_docker
+    ports:
+      - "3000:3000"
