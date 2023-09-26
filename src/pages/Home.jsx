@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
 import firebase from "../utils/firebase";
 import "../style/home.css";
 import logo from "../logoHome.png";
+import React, { useEffect, useState } from "react";
 
 function Home() {
     const [nome, setNome] = useState("");
