@@ -62,6 +62,21 @@ body {
     font-size: 15px;
 }
 
+.cadastroLink {
+    padding-bottom: 12px;
+}
+
+a:-webkit-any-link {
+    color: rgb(58, 58, 252);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:-webkit-any-link:hover {
+    cursor: pointer;
+    color: #005288;
+}
+
 .footer {
     padding-top: 8px;
 }
