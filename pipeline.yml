@@ -1,0 +1,12 @@
+node{
+    stage('build'){
+        sh 'npm start'
+    }
+    stage('test'){
+        git branch: 'master', url: 'https://github.com/Thzzao/PaginaLoginReactPUCPR.git'
+        sh 'npm test'
+    }
+    stage('deploy'){
+        echo "Finalizado"
+    }
+}
