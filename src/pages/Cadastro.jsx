@@ -1,5 +1,5 @@
-import '../style/cadastro.css';
 import firebase from '../utils/firebase';
+import '../style/cadastro.css';
 import logo from '../logoCadastro.png';
 import { Botao } from '../components/botao/Botao';
 import React, { useState } from 'react';
@@ -29,7 +29,6 @@ function Cadastro() {
         } else {
             setMensage("Digite os dados corretamente")
         }
-
         setTimeout(() => {
             setMensage("")
         }, 5000);
@@ -59,7 +58,6 @@ function Cadastro() {
                         name="sobrenome"
                         id="sobrenome"
                         placeholder="Digite seu sobrenome"
-                        // value={sobrenome}
                         onChange={e => setSobrenome(e.target.value)}>
                     </input>
                 </div>
@@ -70,7 +68,6 @@ function Cadastro() {
                         type="date"
                         name="dataNas"
                         id="dataNas"
-                        // value={dataNas}
                         onChange={e => setDataNas(e.target.value)}>
                     </input>
                 </div>
@@ -82,7 +79,6 @@ function Cadastro() {
                         name="email"
                         id="email"
                         placeholder="Digite seu email"
-                        // value={email}
                         onChange={e => setEmail(e.target.value)}>
                     </input>
                 </div>
@@ -94,7 +90,6 @@ function Cadastro() {
                         name="senha"
                         id="senha"
                         placeholder="Digite sua senha"
-                        // value={password}
                         onChange={e => setPassword(e.target.value)}>
                     </input>
                 </div>
@@ -110,7 +105,6 @@ function Cadastro() {
             </form >
         </div>
     )
-
 }
 
 export default Cadastro
